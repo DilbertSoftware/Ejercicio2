@@ -1,6 +1,6 @@
 package logica;
 
-public class Empleado {
+public abstract class Empleado {
 
 	private String nombre;
 	private String apellido;
@@ -59,10 +59,18 @@ public class Empleado {
 		return funcionario;
 	}
 
+	public abstract double getSueldo();
+	
 	@Override
 	public String toString() {
 		return "nombre=" + nombre + ", apellido=" + apellido + ", numeroBPS=" + numeroBPS + ", funcionario="
 				+ funcionario + ", direccion=" + direccion + ", telefono=" + telefono ;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
 	}
 	
 	
